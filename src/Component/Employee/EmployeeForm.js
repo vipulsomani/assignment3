@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Employee.css';
 
 
 function EmployeeForm(props) {
@@ -6,12 +7,10 @@ function EmployeeForm(props) {
     let [empJob, jobChange] = useState({ job: '' });
 
     const changeNameHandler=(event)=>{
-       let newname=event.target.value
-    empChange( {name:newname} )
+    empChange( {name:event.target.value} )
     }
     const changeJobHandler=(event)=>{
-        console.log('inside job')
-   jobChange({ job:event.target.value })
+        jobChange({ job:event.target.value })
     }
     
     const addEmployee = () => {
@@ -34,7 +33,7 @@ function EmployeeForm(props) {
                     value={empJob.job}
                     onChange={changeJobHandler}
                     placeholder='Enter Job' />
-                <button type="button" onClick={addEmployee}>Add </button>
+                <button type="button" onClick={addEmployee}>Submit</button>
             </form>
         </div>
     )

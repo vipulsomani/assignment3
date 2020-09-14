@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import './App.css';
-import EmployeeForm from './Component/Employee/EmployeeForm';
+//import './App.css';
 import EmployeeData from './Component/Employee/EmployeeData';
+import './Component/Employee/Employee.css'
+
 const App = () =>{
   return(
-    <div>
+    <div className="Employee">
       <EmployeeData></EmployeeData>
     </div>
   )
